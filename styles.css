@@ -83,3 +83,48 @@ footer {
     color: #333;
     margin-bottom: 1rem;
 }
+
+/* Reflection Styles */
+.recent-reflections {
+    margin-top: 2rem;
+}
+
+.reflection-preview {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.reflection-preview h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.reflection {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.reflection-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.reflection-meta .tags {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ddd;
+}
+
+.reflection-content {
+    line-height: 1.8;
+}
+
+.reflection-content ul {
+    margin: 1rem 0 1rem 2rem;
+}
