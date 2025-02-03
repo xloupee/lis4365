@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 - JavaScript Introduction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="module3.html">Module 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Module 3 Page</h1>
+        <p>Created by Kenneth Jiang</p>
+
+        <script>
+            document.write("<h1>This is my first JavaScript! 😊</h1>");
+
+            // Add a button with an event listener
+            document.write(`
+                <button onclick="showMessage()">Click me!</button>
+                <p id="demo"></p>
+            `);
+
+            function showMessage() {
+                document.getElementById("demo").innerHTML = "Button clicked at: " + new Date().toLocaleTimeString();
+            }
+        </script>
+
+        <h2>JavaScript Variable Test</h2>
+        <p id="price-demo"></p>
+
+        <script>
+            var price1 = 5;
+            var price2 = 6;
+            var total = price1 + price2;
+            document.getElementById("price-demo").innerHTML = "The total is: " + total;
+        </script>
+
+        <h2>Image Format Comparison</h2>
+        <div class="image-comparison">
+            <div class="image-container">
+                <h3>PNG Format</h3>
+                <img src="cursor.png" alt="PNG version">
+                <p>PNG is best for:
+                    <br>- Images with transparency
+                    <br>- Screenshots
+                    <br>- Text-heavy images
+                </p>
+            </div>
+
+            <div class="image-container">
+                <h3>GIF Format</h3>
+                <img src="cursor.gif" alt="GIF version">
+                <p>GIF is best for:
+                    <br>- Animations
+                    <br>- Simple graphics
+                    <br>- Limited color images
+                </p>
+            </div>
+
+            <div class="image-container">
+                <h3>JPG Format</h3>
+                <img src="cursor.jpg" alt="JPG version">
+                <p>JPG is best for:
+                    <br>- Photographs
+                    <br>- Complex images
+                    <br>- Web-optimized images
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My First Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
