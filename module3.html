@@ -79,6 +79,61 @@
                 </p>
             </div>
         </div>
+
+        <h2>Custom Temperature Converter</h2>
+        <div id="temp-converter">
+            <input type="number" id="temperature" placeholder="Enter temperature">
+            <select id="unit">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+            </select>
+            <button onclick="convertTemperature()">Convert</button>
+            <p id="temp-result"></p>
+        </div>
+
+        <script>
+            function convertTemperature() {
+                let temp = document.getElementById("temperature").value;
+                let unit = document.getElementById("unit").value;
+                let result;
+
+                if (unit === "C") {
+                    if (temp < 0) {
+                        result = "It's freezing! " + temp + "°C is " + (temp * 9 / 5 + 32) + "°F";
+                    } else if (temp < 20) {
+                        result = "It's cool. " + temp + "°C is " + (temp * 9 / 5 + 32) + "°F";
+                    } else {
+                        result = "It's warm! " + temp + "°C is " + (temp * 9 / 5 + 32) + "°F";
+                    }
+                } else {
+                    if (temp < 32) {
+                        result = "It's freezing! " + temp + "°F is " + ((temp - 32) * 5 / 9) + "°C";
+                    } else if (temp < 68) {
+                        result = "It's cool. " + temp + "°F is " + ((temp - 32) * 5 / 9) + "°C";
+                    } else {
+                        result = "It's warm! " + temp + "°F is " + ((temp - 32) * 5 / 9) + "°C";
+                    }
+                }
+
+                document.getElementById("temp-result").innerHTML = result;
+            }
+        </script>
+
+        <h2>Fixed Greeting Example</h2>
+        <p id="greeting-demo">Display the result here.</p>
+
+        <script>
+            var greeting;
+            var hour = new Date().getHours();
+
+            if (hour < 18) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+
+            document.getElementById("greeting-demo").innerHTML = greeting;
+        </script>
     </main>
 
     <footer>
